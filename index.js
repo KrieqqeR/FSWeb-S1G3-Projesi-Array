@@ -40,10 +40,39 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
-}
+const orijinalTatlar2 = [
+  "Muz",
+  "Vişne",
+  "Ceviz",
+  "Kestane",
+  "Kiraz",
+  "Çikolata",
+  "Fındık Çikolata",
+  "Fıstık Çikolata",
+  "Badem Çikolata",
+  "Franbuaz",
+  "Yaban Mersini",
+  "Tarçın",
+  "Badem",
+  "Kahve",
+  "Fındık",
+  "Anten Fıstık",
+  "Limon",
+  "Misket Limon",
+  "Akçaağaç Şurubu",
+  "Şeftali",
+  "Nane",
+  "Ananas",
+  "Ahududu",
+  "Çilek",
+  "Vanilya",
+];
 
+function kopyala(a) {
+  console.log(a)
+  return a
+}
+kopyala(orijinalTatlar2)
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -56,9 +85,17 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+
+function dizi25Cesitmi(onaylananDizi) {
+
+  if (onaylananDizi.length === 25) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
+dizi25Cesitmi(orijinalTatlar)
 
 
 /* Görev 3:
@@ -74,9 +111,14 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+
+
+function cesitEkle(g3Dizi, g3String) {
+  g3Dizi.unshift(g3String)
+  return g3Dizi;
 }
+
+cesitEkle(orijinalTatlar, "Kakule")
 
 
 /* Cörev 4:
@@ -92,10 +134,11 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(g4Dizi) {
+  g4Dizi.pop()
+  return g4Dizi
 }
-
+sonCesitiKaldir(orijinalTatlar)
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -108,9 +151,10 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(g5Dizi, g5Deger) {
+  return g5Dizi[g5Deger]
 }
+indekstekiCesitiGetir(orijinalTatlar, 2)
 
 
 /* Görev 6:
@@ -128,10 +172,13 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
-}
 
+function ismeGoreCesitCikar(g6Dizi, g6String) {
+  g6String = g6Dizi.indexOf(g6String)
+  g6Dizi.splice(g6String, 1)
+  return g6Dizi
+}
+ismeGoreCesitCikar(orijinalTatlar, "Tarçın")
 
 /* Görev 7:
 
@@ -146,7 +193,7 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
    4. Varsa, onları yeni bir diziye ekleyin
    5. Filtrelenmiş tatları içeren yeni diziyi döndürün
 
-  Örneğin: ismeGoreFiltrele(orijinalTatlar, "Çikolata") çalıştırıldığında ["Çikolata", "Fındık Çikolata", "Fıstık Çikolata", "Badem Çikolata"]
+  Örneğin: ismeGoreFiltrele(orijinalTatlar, "Çikolata") çalıştırıldığında ["Çikolata", "Fındık Çikolata", "Fıstık Çikolata", "Badem Çikolata"]                     
 
   İPUCU - bunu çözmenize yardımcı olması için .includes yöntemini kullanabilirsiniz.
 
@@ -154,10 +201,14 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(g7Dizi, g7String) {
+  let g7YeniDizi = [];
+  if (g7Dizi.includes(g7String)) {
+    g7YeniDizi.push()
+  }
+  return g7YeniDizi
 }
-
+ismeGoreFiltrele(orijinalTatlar, "Çikolata")
 
 
 /* ALIŞTIRMA */
@@ -172,7 +223,7 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
    Örneğin: ortalamaKelimeSayisi(orijinalTatlar) 0 ile 2 arasında bir sayı döndürmelidir.
 */
 
-function ortalamaKelimeSayisi(/*kod buraya*/){
+function ortalamaKelimeSayisi(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -190,7 +241,7 @@ Aşağıdakileri yapmak için rastgeleTatlar işlevini ve yeni dizileri kullanı
 */
 
 
-function rastgeleTatlar(/*kod buraya*/){
+function rastgeleTatlar(/*kod buraya*/) {
   /*kod buraya*/
 }
 
@@ -234,7 +285,7 @@ function rastgeleTatlar(/*kod buraya*/){
 
 
 /* Lütfen bu satırın altındaki hiçbir şeyi değiştirmeyin */
-function sa(){
+function sa() {
   console.log('Calışıyor');
   return 'as';
 }
