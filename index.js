@@ -202,13 +202,16 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 
 
 function ismeGoreFiltrele(g7Dizi, g7String) {
-  let g7YeniDizi = [];
-  if (g7Dizi.includes(g7String)) {
-    g7YeniDizi.push()
+  const g7YeniDizi = [];
+
+  for (let i = 0; i < g7Dizi.length; i++) {
+    if (g7Dizi[i].includes(g7String)) {
+      g7YeniDizi.push(g7Dizi[i]);
+    }
   }
-  return g7YeniDizi
+  return g7YeniDizi;
 }
-ismeGoreFiltrele(orijinalTatlar, "Çikolata")
+ismeGoreFiltrele(orijinalTatlar, "Çikolata");
 
 
 /* ALIŞTIRMA */
